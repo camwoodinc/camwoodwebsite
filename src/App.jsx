@@ -10,8 +10,8 @@ import Insights from "./components/Insights";
 import CareersSection from "./components/CareersSection";
 import ContactForm from "./components/ContactForm";
 import Footer from "./components/Footer";
-import Chatbot from "./components/Chatbot";
-import InsightsPage from "./pages/Insight"; // Renamed to avoid conflict
+import InsightsPage from "./pages/Insight";
+import ScrollToTop from "./components/ScrollToTop";
 
 const Home = () => (
   <>
@@ -30,7 +30,6 @@ const Home = () => (
 );
 
 const App = () => {
-  // Add this useEffect hook to handle the light/dark mode logic
   useEffect(() => {
     const theme = localStorage.getItem("theme");
     if (theme) {
@@ -39,15 +38,14 @@ const App = () => {
   }, []);
 
   return (
-    <>
-      <Router>
-        <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/insights" element={<InsightsPage />} />
-        </Routes>
-      </Router>
-    </>
+    <Router>
+      <Header />
+      <ScrollToTop /> {/* 2. Place it here */}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/insights" element={<InsightsPage />} />
+      </Routes>
+    </Router>
   );
 };
 

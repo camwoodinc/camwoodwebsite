@@ -12,7 +12,6 @@ import Footer from '../components/Footer';
 
 const Insight = () => {
   useEffect(() => {
-    // Scroll spy logic
     const sections = ['overview', 'principles', 'process', 'governance', 'architecture', 'outcomes', 'faq'];
     const sectionElements = sections.map(id => document.getElementById(id)).filter(Boolean);
     const navLinks = sections.map(id => document.querySelector(`.nav-link[href="#${id}"]`)).filter(Boolean);
@@ -32,7 +31,6 @@ const Insight = () => {
 
     sectionElements.forEach(s => spy.observe(s));
 
-    // Keyboard navigation
     const handleKeyDown = (e) => {
       if (['ArrowLeft', 'ArrowRight'].includes(e.key)) {
         const currentHash = window.location.hash || '#overview';
@@ -50,7 +48,6 @@ const Insight = () => {
 
     document.addEventListener('keydown', handleKeyDown);
 
-    // Initial state check
     const initialHash = window.location.hash || '#overview';
     setActiveHash(initialHash);
 
