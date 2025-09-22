@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { HashLink } from 'react-router-hash-link';
 import logo from "../assets/images/camwoodlogo.svg";
 
 const Header = () => {
@@ -12,27 +13,25 @@ const Header = () => {
   return (
     <header>
       <div className="container nav" role="navigation" aria-label="Main">
-        <a href="/" className="brand">
+        <HashLink to="/#" className="brand" smooth>
           <div className="brand__mark" aria-hidden="true">
             <img src={logo} alt="Camwood Inc. Logo" />
           </div>
           <div className="brand__name">Camwood Inc.</div>
-        </a>
+        </HashLink>
 
         <nav className="nav__links" aria-label="Primary">
-          <a href="/#about">About</a>
-          <a href="/#solutions">Solutions</a>
-          <a href="/#cases">Case Studies</a>
-          <a href="/#insights">Insights</a>
-          <a href="/#careers">Careers</a>
-          <a href="/#contact" className="nav__cta">
+          <HashLink to="/#about" smooth>About</HashLink>
+          <HashLink to="/#solutions" smooth>Solutions</HashLink>
+          <HashLink to="/#cases" smooth>Case Studies</HashLink>
+          <HashLink to="/#insights" smooth>Insights</HashLink>
+          <HashLink to="/#careers" smooth>Careers</HashLink>
+          <HashLink to="/#contact" className="nav__cta" smooth>
             Partner With Us
-          </a>
-          {/* Removed the desktop theme toggle button */}
+          </HashLink>
         </nav>
 
         <div className="nav-controls-mobile">
-          {/* Removed the mobile theme toggle button */}
           <button
             type="button"
             className="nav__btn"
@@ -53,18 +52,19 @@ const Header = () => {
           className={`nav__menu ${isMenuOpen ? "is-open" : ""}`}
           hidden={!isMenuOpen}
         >
-          <a href="/#about">About</a>
-          <a href="/#solutions">Solutions</a>
-          <a href="/#cases">Case Studies</a>
-          <a href="/#insights">Insights</a>
-          <a href="/#careers">Careers</a>
-          <a
-            href="/#contact"
+          <HashLink to="/#about" smooth>About</HashLink>
+          <HashLink to="/#solutions" smooth>Solutions</HashLink>
+          <HashLink to="/#cases" smooth>Case Studies</HashLink>
+          <HashLink to="/#insights" smooth>Insights</HashLink>
+          <HashLink to="/#careers" smooth>Careers</HashLink>
+          <HashLink
+            to="/#contact"
             className="nav__cta"
             style={{ display: "inline-block" }}
+            smooth
           >
             Partner With Us
-          </a>
+          </HashLink>
         </div>
       </div>
     </header>
