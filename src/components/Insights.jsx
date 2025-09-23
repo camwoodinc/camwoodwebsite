@@ -12,7 +12,6 @@ const Insights = () => (
       <div className="container">
         <div className="section__head">
           <h2 className="h2">Insights</h2>
-          <a className="btn" href="#">Browse All</a>
         </div>
         <div className="posts">
           <article className="card product">

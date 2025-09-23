@@ -12,6 +12,7 @@ import ContactForm from "./components/ContactForm";
 import Footer from "./components/Footer";
 import InsightsPage from "./pages/Insight";
 import ScrollToTop from "./components/ScrollToTop";
+import Chatbot from "./components/Chatbot";
 
 const Home = () => (
   <>
@@ -45,6 +46,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/insights" element={<InsightsPage />} />
       </Routes>
+      <Chatbot />
     </Router>
   );
 };
