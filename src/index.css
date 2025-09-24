@@ -6,19 +6,12 @@
 */
 :root {
   --color-bg: #0d0f13;
-  /* page background - slightly darker */
   --color-surface: #1a1e27;
-  /* cards/sections - slightly lighter for contrast */
   --color-text: #cccccc;
-  /* primary text */
   --color-text-muted: #b8bdc9;
-  /* secondary text */
   --color-brand: #4d74ff;
-  /* accent color */
   --color-brand-ink: #0c1226;
-  /* text on accent */
   --color-line: #2e3547;
-  /* borders/dividers - slightly more pronounced */
   --color-success: #3fbf7f;
 
   --radius: 14px;
@@ -34,9 +27,9 @@
   :root {
     --color-bg: #f0f2f5;
     --color-surface: #ffffff;
-    --color-text: #2c3e50;
-    --color-text-muted: #7f8c8d;
-    --color-line: #dbe4ee;
+    --color-text: #2e3547;
+    --color-text-muted: #6b7280;
+    --color-line: #e5e7eb;
     --color-brand-ink: #ffffff;
     --color-brand: #4d74ff;
     --shadow-light: 0 4px 8px rgba(0, 0, 0, 0.05);

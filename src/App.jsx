@@ -41,12 +41,11 @@ const App = () => {
   return (
     <Router>
       <Header />
-      <ScrollToTop /> {/* 2. Place it here */}
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/insights" element={<InsightsPage />} />
       </Routes>
-      <Chatbot />
     </Router>
   );
 };
